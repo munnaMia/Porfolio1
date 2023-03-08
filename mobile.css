@@ -1,0 +1,382 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+p{
+    font-size: 1.2rem;
+    text-align: justify;
+}
+h2{
+    font-size: 1.9remrem;
+    text-align: center;
+}
+.dot-hr{
+    border: dotted white 6px;
+    border-bottom: none;
+    margin: 20px auto;
+    width: 110px;
+}
+
+
+/* navigation part */
+
+
+/*this code snipet is used for resposib work. its work for desktop desing*/
+[class*="col-"]{
+    float: left;
+    padding: 10px;
+}
+
+/* for mobile design in responsib formate */
+[class*="col-"]{
+    width: 100%;
+}
+
+.navbar{
+    background-color: rgb(26, 106, 255);
+    padding: 1% 2%;
+    text-align: center;
+}
+
+.navbar::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/*website logo*/
+img{
+    height: 120px;
+    width: 120px;
+}
+
+/*website head title or name*/
+.navbar .nav-heading h1{
+    font-size: 2.5rem;
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    padding-top: 10px;
+}
+
+/* website menu designs */
+.navbar .nav-menu{
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+
+.navbar .nav-menu a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #fff;
+    border-radius: 10px;
+    background-color: hsl(229, 98%, 55%);
+    margin: 7px 0;
+    padding: 10px;
+}
+
+.navbar .nav-menu a:hover{
+    background-color: hsl(229, 92%, 75%);
+}
+
+
+
+/* start of profile part */
+.profile-disc h1{
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.profile{
+    padding: 40px 18px;
+    position: relative;
+    text-align: center;
+}
+
+.profile .profile-icon{
+    border: 6px solid hsl(229, 97%, 61%);
+    border-radius: 50%;
+    transition: transform 2s;
+}
+
+.profile .profile-icon:hover{
+    border: 6px solid hsl(229, 92%, 75%);
+    transform: rotate(360deg);
+}
+
+.profile .profile-disc h1{
+    font-family: 'Satisfy', cursive;
+    font-size: 3rem;
+}
+
+.profile .profile-disc p{
+    color: gray;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto 20px auto;
+}
+
+.profile::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+
+
+/* start of about me section */
+
+.aboutme{
+    background-color: rgb(26, 106, 255);
+    padding: 1% 7%;
+    color: #fff;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.aboutme .aboutme-img img{
+    border: 5px solid white;
+    border-radius: 40px;
+    height: 220px;
+    width: 200px;
+}
+
+.aboutme p{
+    text-align: center;
+}
+.aboutme a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.cv-button{
+    background-color: #b3daff;
+    border: none;
+    border-radius: 12px;
+    padding: 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 10px;
+}
+
+
+.aboutme::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+
+/* card section start */
+
+.professionall-exp{
+    padding: 1% 0%;
+}
+
+.professionall-exp .card{
+    background-color: rgb(221, 232, 241);
+    border-radius: 5px;
+    padding: 10px;
+    transition: 1s;
+    height: 500px;
+}
+
+.professionall-exp .card:hover{
+    box-shadow: 0 9px 10px 5px black;
+}
+
+.professionall-exp .card-icon{
+    text-align: center;
+}
+
+.professionall-exp .card .card-icon img{
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.professionall-exp .card .card-title h2{
+    background-color: #ffffff;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.skills-container{
+    padding-right: 45px;
+}
+
+.skills-container li{
+    list-style: none;
+    font-weight: bolder;
+    margin: 50px 0px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.skills-container li::before{
+    content: '';
+    position: absolute;
+    top: calc(100% + 5%);
+    left: 0px;
+    background-color: rgba(70, 172, 240, 0.288);
+    width: 100%;
+    height: 20px;
+    border-radius: 100px;
+
+}
+
+.skills-container li::after{
+    content: '';
+    position: absolute;
+    top: calc(100% + 5%);
+    left: 0px;
+    background-color: rgba(6, 142, 253, 0.877);
+    width: 0;
+    height: 20px;
+    border-radius: 100px;
+
+    
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 5;
+}
+
+.skills-container li.html::after{
+    animation-name: html1;
+}
+@keyframes html1 {
+    to{
+        width: 90%;
+    }
+}
+
+.skills-container li.css::after{
+    animation-name: css1;
+}
+@keyframes css1 {
+    to{
+        width: 80%;
+    }
+}
+
+.skills-container li.js::after{
+    animation-name: js1;
+}
+@keyframes js1 {
+    to{
+        width: 10%;
+    }
+}
+
+
+.professionall-exp::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+
+
+/*contact me part*/
+
+
+.achivement-sec{
+    padding: 1% 3%;
+    background-color: rgb(26, 106, 255);
+    color: white;
+}
+
+.achivement{
+    padding: 1% 3%;
+}
+
+
+.contact{
+    text-align: center;
+}
+
+.contact input, textarea{
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    resize: none;
+}
+
+.contact button{
+    border: none;
+    border-radius: 12px;
+    background-color: rgb(34, 34, 34);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    padding: 15px;
+    margin: 10px;
+    width: 90px;
+}
+
+
+.social-link{
+    text-align: center;
+}
+
+.media-button .btn{
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 32px;
+    padding: 5px;
+    margin: 10px;
+    width: 50px;
+    transition: 0.5s;
+}
+
+.media-button .btn:hover{
+    box-shadow: 0 8px 8px 5px black;
+}
+
+.achivement-sec::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+
+/* last side part */
+
+.last-part{
+    background-color: black;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8rem;
+    color: white;
+}
+.last-part a{
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-size: 1rem;
+    margin: 15px 0;
+}
+.last-part a:hover{
+    color: rgb(0, 140, 255);
+    font-size: 1.3rem;
+}
+
+
+.last-part::after{
+    content: '';
+    display: table;
+    clear: both;
+}
